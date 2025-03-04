@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./src/output.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Liter&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body class="font-[liter]">
+<header class="md:h-[200px]">
+    <nav class="flex justify-between">
+        <!-- logo -->
+
+         <img src="../media/Aciv_logo.png" alt="" class="w-[100px] m-4 z-1 md:h-[100px] md:ml-10">
+
+          <!-- hamburger toggle -->
+
+         <div class="z-99 md:hidden">
+            <ion-icon onclick="onToggleMenu(this)" name="menu-outline" class=" text-[50px] cursor-pointer py-10 px-5"></ion-icon>
+           </div>
+
+         <!-- links -->
+
+          <div class="nav-links duration-500 bg-white absolute top-[-100%] h-[100vh] w-[100%] z-1 md:bg-transparent md:duration-0 md:static md:h-[200px]">
+                <ul class="flex flex-col justify-center items-center gap-4 px-5 py-25 md:flex-row md:pr-10 md:py-15 justify-end md:text-white">
+                    <li><a href="">Inicio</a></li>
+                    <li><a  href="">Nuestra Mision</a></li>
+                    <li><a href="" >Servicios</a></li>
+                    <li><a href="" >Testimonios</a></li>
+                    <li><a href="">Contacto</a></li>
+                </ul>
+          </div>
+
+
+    </nav>
+</header>
+
+<section class="">
+    <div class="bg-black opacity-25 h-full w-full absolute top-0 z-0"></div>
+    <div class="absolute top-0 left-0 h-full w-full z-[-1]">
+        <video autoplay loop muted plays-inline class="w-full h-full object-cover">
+            <source src="../media/fondo_hero.mp4" type="video/mp4">
+        </video>
+    </div>
+</section>
+
+<script>
+    const navLinks = document.querySelector('.nav-links')
+    function onToggleMenu(e) {
+        e.name = e.name === 'menu-outline' ? 'close' : 'menu-outline'
+        navLinks.classList.toggle('top-[0%]')
+        }
+</script>
+</body>
+</html>
